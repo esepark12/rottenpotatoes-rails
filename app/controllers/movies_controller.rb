@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
     @ratings_to_show = (params[:ratings] || {}).keys
     if @ratings_to_show == {}
       #@ratings_to_show = Hash[@all_ratings.map {|rating| [rating, rating]}]
-      @ratings_to_show = @all_ratings
+      @ratings_to_show = ['PG', 'G']
     end
     #update movies filtered by ratings
     @movies = Movie.with_ratings(@ratings_to_show)
