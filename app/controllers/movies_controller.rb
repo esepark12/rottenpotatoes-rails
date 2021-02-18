@@ -18,8 +18,7 @@ class MoviesController < ApplicationController
       @ratings_to_show = @all_ratings
     end
     #update movies filtered by ratings
-    @temp_ratings = @ratings_to_show
-    #@movies = Movie.with_ratings(@temp_ratings)
+    @movies = Movie.with_ratings(@ratings_to_show)
     
     ######
   end
