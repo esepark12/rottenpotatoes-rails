@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
-    @ratings = Movie.all_ratings
+    #@ratings = Movie.all_ratings
   end
 
   def new
