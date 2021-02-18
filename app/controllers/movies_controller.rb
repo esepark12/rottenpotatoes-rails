@@ -20,8 +20,8 @@ class MoviesController < ApplicationController
     #update movies filtered by ratings
     
     @movies = Movie.with_ratings(ratings_list.keys)
-    
     ######
+    @title_header = params[:clicked_header] || ""
   end
 
   def new
