@@ -1,7 +1,6 @@
 <!--  This file is app/views/movies/index.html.erb -->
 <style>
 #title_header {
-  background-color: lightblue;
   color: black;
 }
 </style>
@@ -23,9 +22,9 @@
   <thead>
     <tr>
       <th>
-       
+        <a id="title_header">
         <%= link_to "Movie Title", movies_path %>
-     
+        </a>
        </th>
       <th>Rating</th>
       <th>Release Date</th>
