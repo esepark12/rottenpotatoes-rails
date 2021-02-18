@@ -18,7 +18,8 @@ class MoviesController < ApplicationController
       @ratings_to_show = @all_ratings
     end
     #update movies filtered by ratings
-    @movies = Movie.where(:rating => @ratings_to_show)
+    @temp_ratings = Hash.keys(@ratings_to_show)
+    @movies = Movie.with_ratings(@temp_ratings)
     
     ######
   end
