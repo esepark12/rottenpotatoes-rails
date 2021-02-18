@@ -21,7 +21,8 @@ class MoviesController < ApplicationController
     
     @movies = Movie.with_ratings(ratings_list.keys)
     ######
-    @title_header = params[:clicked_header]
+    @title_header = params[:title_header] || ""
+    @release_date_header = params[:release_date_header] || ""
   end
 
   def new
