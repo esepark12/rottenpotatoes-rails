@@ -27,6 +27,9 @@ class MoviesController < ApplicationController
     if @title_header != ""
       @movies = Movie.order(:title)
     end
+    if @release_date_header != ""
+      @movies = Movie.order(:release_date)
+    end
   end
 
   def new
