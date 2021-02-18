@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     ######added
     @all_ratings = Movie.all_ratings #
-    @ratings_to_show = params[:ratings]
+    @ratings_to_show = params[:ratings] || {}
 
     if @ratings_to_show == {}
       @ratings_to_show = Hash[@all_ratings.map {|rating| [rating, rating]}]
