@@ -23,6 +23,10 @@ class MoviesController < ApplicationController
     ######
     @title_header = params[:title_header] || ""
     @release_date_header = params[:release_date_header] || ""
+    #sort movies in order
+    if @title_header != ""
+      @movies = Movie.order(:title)
+    end
   end
 
   def new
