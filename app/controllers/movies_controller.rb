@@ -25,10 +25,10 @@ class MoviesController < ApplicationController
     @release_date_header = params[:release_date_header] || ""
     #sort movies in order
     if @title_header != ""
-      @movies = Movie.order(:title)
+      @movies = ratings_list.order(:title)
     end
     if @release_date_header != ""
-      @movies = Movie.order(:release_date)
+      @movies = ratings_list.order(:release_date)
     end
   end
 
