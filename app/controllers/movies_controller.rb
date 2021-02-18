@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
       @ratings_to_show = @all_ratings
     end
     #update movies filtered by ratings
-    @movies = Movie.where({rating: @ratings_to_show})
+    @movies = Movie.where(:rating => @ratings_to_show)
     
     ######
   end
