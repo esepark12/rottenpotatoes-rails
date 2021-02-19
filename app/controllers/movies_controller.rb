@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
   end
 
   def index #index.html
-    @movies = Movie.all
+    #@movies = Movie.all
     ######added
     @all_ratings = Movie.all_ratings #
     @ratings_to_show = params[:ratings] || {} 
