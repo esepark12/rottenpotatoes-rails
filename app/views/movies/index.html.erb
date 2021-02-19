@@ -26,7 +26,7 @@
   <thead>
     <tr>
       <th id=<%= @title_header%>>
-        <%= link_to "Movie Title", movies_path({:title_header => "title_header"}, {:ratings => {'PG':1}}) %>
+        <%= link_to "Movie Title", movies_path(:title_header => "title_header", :ratings => {'PG':1}) %>
        </th>
       <th>Rating</th>
       <th id=<%= @release_date_header%>>
