@@ -25,7 +25,7 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th id=<%= hilite if @clicked_header == "title_header"%>>
+      <th class=<%= hilite if @clicked_header == "title_header"%>>
         <%= link_to "Movie Title", movies_path(:clicked_header => "title_header", :ratings => @ratings_to_show) %>
        </th>
       <th>Rating</th>
