@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
     if @clicked_header == "title_header"
       @movies = @movies.order(:title)
     end
-    if @clicked_header != "release_date_header"
+    if @clicked_header == "release_date_header"
       @movies = @movies.order(:release_date)
     end
   end
