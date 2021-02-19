@@ -24,10 +24,10 @@ class MoviesController < ApplicationController
     @clicked_header = params[:clicked_header] || ""
     #sort movies in order
     if @clicked_header == "title_header"
-      @movies = Movie.with_ratings(ratings_list.keys).order(:title)
+      @movies = @movies.order(:title)
     end
     if @clicked_header != "release_date_header"
-      @movies = Movie.with_ratings(ratings_list.keys).order(:release_date)
+      @movies = @movies.order(:release_date)
     end
   end
 
