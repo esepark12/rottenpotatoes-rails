@@ -23,9 +23,9 @@ class MoviesController < ApplicationController
     ######
     @clicked_header = params[:clicked_header] || ""
     if @clicked_header  == "title_header"
-      @movies = ratings_list.order(:title)
+      @movies = Movie.order(:title)
     elsif @clicked_header  == "release_date_header"
-      @movies = ratings_list.order(:release_date)
+      @movies = Movie.order(:release_date)
     end
   end
 
