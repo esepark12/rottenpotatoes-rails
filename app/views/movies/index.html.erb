@@ -29,8 +29,8 @@
         <%= link_to "Movie Title", movies_path(:clicked_header => "title_header", :ratings => @ratings_to_show) %>
        </th>
       <th>Rating</th>
-      <th id=<%= @release_date_header%>>
-        <%= link_to "Release Date", movies_path(:release_date_header => "release_date_header") %>
+      <th class=<%= "hilite" if @clicked_header == "release_date_header"%>>
+        <%= link_to "Release Date", movies_path(:clicked_header => "release_date_header") %>
        </th>
       <th>More Info</th>
     </tr>
