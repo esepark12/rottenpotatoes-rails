@@ -10,7 +10,7 @@
 
 <h2>All Movies</h2>
 <%#  Part 1 %>
-<%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+<%= form_tag movies_path(:clicked_header => session[:clicked_header]), method: :get, id: 'ratings_form' do %>
   Include:
   <% @all_ratings.each do |rating| %>
     <div class="form-check  form-check-inline">
