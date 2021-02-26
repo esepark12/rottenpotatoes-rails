@@ -1,12 +1,4 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<style>
-#title_header {
-  background-color: #ffc107;
-}
-#release_date_header {
-  background-color: #ffc107;
-}
-</style>
 
 <h2>All Movies</h2>
 <%#  Part 1 %>
@@ -18,7 +10,7 @@
       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
     </div>
   <% end %>
-  <%= submit_tag 'Refresh', id: 'ratings_submit', movies_path(:clicked_header => "title_header"), class: 'btn btn-primary' %>
+  <%= submit_tag 'Refresh', id: 'ratings_submit', class: 'btn btn-primary' %>
 <% end %>
 <%#  Part 2: Start here... %>
 
