@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     @all_ratings = Movie.all_ratings #
     @ratings_to_show = params[:ratings] || {} 
     ratings_list = @ratings_to_show
-    #session[:ratings]= @ratings_to_show #part3
+    session[:ratings]= @ratings_to_show #part3
     if @ratings_to_show == {}
       ratings_list = Hash[@all_ratings.map {|x| [x, 1]}] #assign any value
     end
@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
     @movies = Movie.with_ratings(ratings_list.keys)
     ######
     @clicked_header = params[:clicked_header] || "" #session[:clicked_header] || ""
-    #session[:clicked_header] = @clicked_header #part3
+    session[:clicked_header] = @clicked_header #part3
     #sort movies in order
     if @clicked_header == "title_header"
       @movies = @movies.order(:title)
